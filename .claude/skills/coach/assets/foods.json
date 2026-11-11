@@ -1,0 +1,910 @@
+{
+"chicken breast": {
+"kcal": 120.0,
+"p": 22.5,
+"c": 0.0,
+"f": 2.6,
+"aisle": "Meat & fish"
+},
+"chicken thigh, skinless": {
+"kcal": 143.0,
+"p": 19.0,
+"c": 0.0,
+"f": 7.5,
+"aisle": "Meat & fish"
+},
+"turkey mince, 5% fat": {
+"kcal": 125.0,
+"p": 21.0,
+"c": 0.0,
+"f": 4.5,
+"aisle": "Meat & fish"
+},
+"turkey breast slices": {
+"kcal": 104.0,
+"p": 22.0,
+"c": 1.5,
+"f": 1.2,
+"aisle": "Meat & fish"
+},
+"beef mince, 5% fat": {
+"kcal": 137.0,
+"p": 21.0,
+"c": 0.0,
+"f": 5.0,
+"aisle": "Meat & fish"
+},
+"lean beef strips": {
+"kcal": 130.0,
+"p": 22.0,
+"c": 0.0,
+"f": 4.5,
+"aisle": "Meat & fish"
+},
+"sirloin steak": {
+"kcal": 160.0,
+"p": 22.0,
+"c": 0.0,
+"f": 7.5,
+"aisle": "Meat & fish"
+},
+"pork tenderloin": {
+"kcal": 120.0,
+"p": 21.0,
+"c": 0.0,
+"f": 3.5,
+"aisle": "Meat & fish"
+},
+"lean ham": {
+"kcal": 110.0,
+"p": 18.0,
+"c": 1.5,
+"f": 3.5,
+"aisle": "Meat & fish"
+},
+"salmon fillet": {
+"kcal": 208.0,
+"p": 20.0,
+"c": 0.0,
+"f": 13.0,
+"aisle": "Meat & fish"
+},
+"smoked salmon": {
+"kcal": 117.0,
+"p": 18.0,
+"c": 0.0,
+"f": 4.3,
+"aisle": "Meat & fish"
+},
+"tuna steak": {
+"kcal": 109.0,
+"p": 24.0,
+"c": 0.0,
+"f": 0.5,
+"aisle": "Meat & fish"
+},
+"canned tuna in water, drained": {
+"kcal": 116.0,
+"p": 26.0,
+"c": 0.0,
+"f": 1.0,
+"aisle": "Pantry"
+},
+"prawns, raw": {
+"kcal": 85.0,
+"p": 20.0,
+"c": 0.0,
+"f": 0.5,
+"aisle": "Meat & fish"
+},
+"white fish fillet": {
+"kcal": 82.0,
+"p": 18.0,
+"c": 0.0,
+"f": 0.7,
+"aisle": "Meat & fish"
+},
+"firm tofu": {
+"kcal": 144.0,
+"p": 15.7,
+"c": 3.5,
+"f": 8.7,
+"aisle": "Fridge"
+},
+"tempeh": {
+"kcal": 192.0,
+"p": 20.0,
+"c": 7.6,
+"f": 10.8,
+"aisle": "Fridge"
+},
+"eggs": {
+"kcal": 143.0,
+"p": 12.6,
+"c": 0.7,
+"f": 9.5,
+"aisle": "Dairy & eggs",
+"piece_g": 50.0
+},
+"egg whites": {
+"kcal": 52.0,
+"p": 11.0,
+"c": 0.7,
+"f": 0.2,
+"aisle": "Dairy & eggs"
+},
+"greek yoghurt, 0% fat": {
+"kcal": 59.0,
+"p": 10.0,
+"c": 3.6,
+"f": 0.4,
+"aisle": "Dairy & eggs"
+},
+"greek yoghurt, full fat": {
+"kcal": 97.0,
+"p": 9.0,
+"c": 3.9,
+"f": 5.0,
+"aisle": "Dairy & eggs"
+},
+"cottage cheese, low fat": {
+"kcal": 72.0,
+"p": 12.4,
+"c": 2.7,
+"f": 1.0,
+"aisle": "Dairy & eggs"
+},
+"skim milk": {
+"kcal": 34.0,
+"p": 3.4,
+"c": 5.0,
+"f": 0.1,
+"aisle": "Dairy & eggs"
+},
+"whole milk": {
+"kcal": 61.0,
+"p": 3.2,
+"c": 4.8,
+"f": 3.3,
+"aisle": "Dairy & eggs"
+},
+"oat milk": {
+"kcal": 46.0,
+"p": 1.0,
+"c": 6.7,
+"f": 1.5,
+"aisle": "Dairy & eggs"
+},
+"almond milk, unsweetened": {
+"kcal": 15.0,
+"p": 0.6,
+"c": 0.3,
+"f": 1.2,
+"aisle": "Dairy & eggs"
+},
+"cheddar": {
+"kcal": 403.0,
+"p": 25.0,
+"c": 1.3,
+"f": 33.0,
+"aisle": "Dairy & eggs"
+},
+"parmesan": {
+"kcal": 431.0,
+"p": 38.0,
+"c": 4.0,
+"f": 29.0,
+"aisle": "Dairy & eggs"
+},
+"feta": {
+"kcal": 264.0,
+"p": 14.0,
+"c": 4.0,
+"f": 21.0,
+"aisle": "Dairy & eggs"
+},
+"light mozzarella": {
+"kcal": 180.0,
+"p": 22.0,
+"c": 2.0,
+"f": 9.0,
+"aisle": "Dairy & eggs"
+},
+"butter": {
+"kcal": 717.0,
+"p": 0.9,
+"c": 0.1,
+"f": 81.0,
+"aisle": "Dairy & eggs"
+},
+"vanilla whey protein": {
+"kcal": 400.0,
+"p": 80.0,
+"c": 7.0,
+"f": 6.0,
+"aisle": "Supplements"
+},
+"chocolate whey protein": {
+"kcal": 380.0,
+"p": 75.0,
+"c": 10.0,
+"f": 5.0,
+"aisle": "Supplements"
+},
+"casein protein": {
+"kcal": 360.0,
+"p": 80.0,
+"c": 5.0,
+"f": 2.0,
+"aisle": "Supplements"
+},
+"rolled oats": {
+"kcal": 379.0,
+"p": 13.0,
+"c": 67.0,
+"f": 6.5,
+"aisle": "Pantry"
+},
+"granola": {
+"kcal": 471.0,
+"p": 10.0,
+"c": 64.0,
+"f": 20.0,
+"aisle": "Pantry"
+},
+"jasmine rice, cooked": {
+"kcal": 130.0,
+"p": 2.7,
+"c": 28.0,
+"f": 0.3,
+"aisle": "Pantry"
+},
+"basmati rice, cooked": {
+"kcal": 121.0,
+"p": 3.5,
+"c": 25.0,
+"f": 0.4,
+"aisle": "Pantry"
+},
+"brown rice, cooked": {
+"kcal": 123.0,
+"p": 2.7,
+"c": 25.6,
+"f": 1.0,
+"aisle": "Pantry"
+},
+"sushi rice, cooked": {
+"kcal": 130.0,
+"p": 2.4,
+"c": 29.0,
+"f": 0.2,
+"aisle": "Pantry"
+},
+"quinoa, cooked": {
+"kcal": 120.0,
+"p": 4.4,
+"c": 21.3,
+"f": 1.9,
+"aisle": "Pantry"
+},
+"pasta, dry": {
+"kcal": 371.0,
+"p": 13.0,
+"c": 75.0,
+"f": 1.5,
+"aisle": "Pantry"
+},
+"wholemeal spaghetti, dry": {
+"kcal": 348.0,
+"p": 14.0,
+"c": 66.0,
+"f": 2.5,
+"aisle": "Pantry"
+},
+"rice noodles, dry": {
+"kcal": 364.0,
+"p": 6.0,
+"c": 80.0,
+"f": 0.6,
+"aisle": "Pantry"
+},
+"egg noodles, dry": {
+"kcal": 384.0,
+"p": 14.0,
+"c": 71.0,
+"f": 4.4,
+"aisle": "Pantry"
+},
+"sourdough bread": {
+"kcal": 260.0,
+"p": 9.0,
+"c": 50.0,
+"f": 2.0,
+"aisle": "Bakery",
+"piece_g": 45.0
+},
+"wholegrain bread": {
+"kcal": 250.0,
+"p": 12.0,
+"c": 43.0,
+"f": 3.5,
+"aisle": "Bakery",
+"piece_g": 40.0
+},
+"bagel": {
+"kcal": 257.0,
+"p": 10.0,
+"c": 50.0,
+"f": 1.6,
+"aisle": "Bakery",
+"piece_g": 95.0
+},
+"tortilla wrap": {
+"kcal": 300.0,
+"p": 8.0,
+"c": 50.0,
+"f": 7.0,
+"aisle": "Bakery",
+"piece_g": 60.0
+},
+"corn tortillas": {
+"kcal": 218.0,
+"p": 5.7,
+"c": 44.6,
+"f": 2.9,
+"aisle": "Bakery",
+"piece_g": 26.0
+},
+"rice cakes": {
+"kcal": 387.0,
+"p": 8.0,
+"c": 81.0,
+"f": 2.8,
+"aisle": "Pantry",
+"piece_g": 9.0
+},
+"potatoes": {
+"kcal": 77.0,
+"p": 2.0,
+"c": 17.0,
+"f": 0.1,
+"aisle": "Fruit & veg"
+},
+"baby potatoes": {
+"kcal": 70.0,
+"p": 1.9,
+"c": 15.7,
+"f": 0.1,
+"aisle": "Fruit & veg"
+},
+"sweet potato": {
+"kcal": 86.0,
+"p": 1.6,
+"c": 20.0,
+"f": 0.1,
+"aisle": "Fruit & veg"
+},
+"pumpkin": {
+"kcal": 26.0,
+"p": 1.0,
+"c": 6.5,
+"f": 0.1,
+"aisle": "Fruit & veg"
+},
+"black beans, canned, drained": {
+"kcal": 114.0,
+"p": 7.5,
+"c": 20.0,
+"f": 0.4,
+"aisle": "Pantry"
+},
+"chickpeas, canned, drained": {
+"kcal": 139.0,
+"p": 7.0,
+"c": 20.0,
+"f": 2.6,
+"aisle": "Pantry"
+},
+"kidney beans, canned, drained": {
+"kcal": 105.0,
+"p": 7.0,
+"c": 18.0,
+"f": 0.5,
+"aisle": "Pantry"
+},
+"lentils, cooked": {
+"kcal": 116.0,
+"p": 9.0,
+"c": 20.0,
+"f": 0.4,
+"aisle": "Pantry"
+},
+"corn kernels": {
+"kcal": 86.0,
+"p": 3.3,
+"c": 19.0,
+"f": 1.4,
+"aisle": "Fruit & veg"
+},
+"banana": {
+"kcal": 89.0,
+"p": 1.1,
+"c": 23.0,
+"f": 0.3,
+"aisle": "Fruit & veg",
+"piece_g": 120.0
+},
+"blueberries": {
+"kcal": 57.0,
+"p": 0.7,
+"c": 14.5,
+"f": 0.3,
+"aisle": "Fruit & veg"
+},
+"strawberries": {
+"kcal": 32.0,
+"p": 0.7,
+"c": 7.7,
+"f": 0.3,
+"aisle": "Fruit & veg"
+},
+"raspberries": {
+"kcal": 52.0,
+"p": 1.2,
+"c": 12.0,
+"f": 0.7,
+"aisle": "Fruit & veg"
+},
+"frozen mixed berries": {
+"kcal": 50.0,
+"p": 0.8,
+"c": 12.0,
+"f": 0.3,
+"aisle": "Frozen"
+},
+"apple": {
+"kcal": 52.0,
+"p": 0.3,
+"c": 14.0,
+"f": 0.2,
+"aisle": "Fruit & veg",
+"piece_g": 180.0
+},
+"pineapple": {
+"kcal": 50.0,
+"p": 0.5,
+"c": 13.0,
+"f": 0.1,
+"aisle": "Fruit & veg"
+},
+"mango": {
+"kcal": 60.0,
+"p": 0.8,
+"c": 15.0,
+"f": 0.4,
+"aisle": "Fruit & veg"
+},
+"kiwi fruit": {
+"kcal": 61.0,
+"p": 1.1,
+"c": 15.0,
+"f": 0.5,
+"aisle": "Fruit & veg",
+"piece_g": 75.0
+},
+"dates": {
+"kcal": 282.0,
+"p": 2.5,
+"c": 75.0,
+"f": 0.4,
+"aisle": "Pantry"
+},
+"honey": {
+"kcal": 304.0,
+"p": 0.3,
+"c": 82.0,
+"f": 0.0,
+"aisle": "Pantry"
+},
+"maple syrup": {
+"kcal": 260.0,
+"p": 0.0,
+"c": 67.0,
+"f": 0.0,
+"aisle": "Pantry"
+},
+"lemon": {
+"kcal": 29.0,
+"p": 1.0,
+"c": 9.0,
+"f": 0.3,
+"aisle": "Fruit & veg",
+"piece_g": 100.0
+},
+"lime": {
+"kcal": 30.0,
+"p": 0.7,
+"c": 10.5,
+"f": 0.2,
+"aisle": "Fruit & veg",
+"piece_g": 65.0
+},
+"broccoli": {
+"kcal": 34.0,
+"p": 2.8,
+"c": 7.0,
+"f": 0.4,
+"aisle": "Fruit & veg"
+},
+"spinach": {
+"kcal": 23.0,
+"p": 2.9,
+"c": 3.6,
+"f": 0.4,
+"aisle": "Fruit & veg"
+},
+"salad leaves": {
+"kcal": 17.0,
+"p": 1.5,
+"c": 3.0,
+"f": 0.2,
+"aisle": "Fruit & veg"
+},
+"rocket": {
+"kcal": 25.0,
+"p": 2.6,
+"c": 3.7,
+"f": 0.7,
+"aisle": "Fruit & veg"
+},
+"cos lettuce": {
+"kcal": 17.0,
+"p": 1.2,
+"c": 3.3,
+"f": 0.3,
+"aisle": "Fruit & veg"
+},
+"cucumber": {
+"kcal": 15.0,
+"p": 0.7,
+"c": 3.6,
+"f": 0.1,
+"aisle": "Fruit & veg"
+},
+"cherry tomatoes": {
+"kcal": 18.0,
+"p": 0.9,
+"c": 3.9,
+"f": 0.2,
+"aisle": "Fruit & veg"
+},
+"tomato": {
+"kcal": 18.0,
+"p": 0.9,
+"c": 3.9,
+"f": 0.2,
+"aisle": "Fruit & veg",
+"piece_g": 120.0
+},
+"capsicum": {
+"kcal": 31.0,
+"p": 1.0,
+"c": 6.0,
+"f": 0.3,
+"aisle": "Fruit & veg",
+"piece_g": 160.0
+},
+"carrot": {
+"kcal": 41.0,
+"p": 0.9,
+"c": 10.0,
+"f": 0.2,
+"aisle": "Fruit & veg",
+"piece_g": 80.0
+},
+"zucchini": {
+"kcal": 17.0,
+"p": 1.2,
+"c": 3.1,
+"f": 0.3,
+"aisle": "Fruit & veg",
+"piece_g": 200.0
+},
+"green beans": {
+"kcal": 31.0,
+"p": 1.8,
+"c": 7.0,
+"f": 0.2,
+"aisle": "Fruit & veg"
+},
+"snow peas": {
+"kcal": 42.0,
+"p": 2.8,
+"c": 7.5,
+"f": 0.2,
+"aisle": "Fruit & veg"
+},
+"mushrooms": {
+"kcal": 22.0,
+"p": 3.1,
+"c": 3.3,
+"f": 0.3,
+"aisle": "Fruit & veg"
+},
+"onion": {
+"kcal": 40.0,
+"p": 1.1,
+"c": 9.3,
+"f": 0.1,
+"aisle": "Fruit & veg",
+"piece_g": 150.0
+},
+"red onion": {
+"kcal": 40.0,
+"p": 1.1,
+"c": 9.3,
+"f": 0.1,
+"aisle": "Fruit & veg",
+"piece_g": 150.0
+},
+"spring onion": {
+"kcal": 32.0,
+"p": 1.8,
+"c": 7.3,
+"f": 0.2,
+"aisle": "Fruit & veg"
+},
+"garlic": {
+"kcal": 149.0,
+"p": 6.4,
+"c": 33.0,
+"f": 0.5,
+"aisle": "Fruit & veg"
+},
+"ginger": {
+"kcal": 80.0,
+"p": 1.8,
+"c": 18.0,
+"f": 0.8,
+"aisle": "Fruit & veg"
+},
+"bok choy": {
+"kcal": 13.0,
+"p": 1.5,
+"c": 2.2,
+"f": 0.2,
+"aisle": "Fruit & veg"
+},
+"kale": {
+"kcal": 49.0,
+"p": 4.3,
+"c": 8.8,
+"f": 0.9,
+"aisle": "Fruit & veg"
+},
+"red cabbage": {
+"kcal": 31.0,
+"p": 1.4,
+"c": 7.4,
+"f": 0.2,
+"aisle": "Fruit & veg"
+},
+"coleslaw mix": {
+"kcal": 25.0,
+"p": 1.3,
+"c": 5.8,
+"f": 0.1,
+"aisle": "Fruit & veg"
+},
+"cauliflower": {
+"kcal": 25.0,
+"p": 1.9,
+"c": 5.0,
+"f": 0.3,
+"aisle": "Fruit & veg"
+},
+"asparagus": {
+"kcal": 20.0,
+"p": 2.2,
+"c": 3.9,
+"f": 0.1,
+"aisle": "Fruit & veg"
+},
+"edamame, shelled": {
+"kcal": 121.0,
+"p": 12.0,
+"c": 9.0,
+"f": 5.0,
+"aisle": "Frozen"
+},
+"frozen peas": {
+"kcal": 81.0,
+"p": 5.4,
+"c": 14.0,
+"f": 0.4,
+"aisle": "Frozen"
+},
+"avocado": {
+"kcal": 160.0,
+"p": 2.0,
+"c": 8.5,
+"f": 14.7,
+"aisle": "Fruit & veg",
+"piece_g": 150.0
+},
+"tomato passata": {
+"kcal": 30.0,
+"p": 1.5,
+"c": 5.5,
+"f": 0.2,
+"aisle": "Pantry"
+},
+"chopped tomatoes, canned": {
+"kcal": 21.0,
+"p": 1.1,
+"c": 4.0,
+"f": 0.1,
+"aisle": "Pantry"
+},
+"olive oil": {
+"kcal": 884.0,
+"p": 0.0,
+"c": 0.0,
+"f": 100.0,
+"aisle": "Pantry"
+},
+"olive oil spray": {
+"kcal": 884.0,
+"p": 0.0,
+"c": 0.0,
+"f": 100.0,
+"aisle": "Pantry"
+},
+"peanut butter": {
+"kcal": 588.0,
+"p": 25.0,
+"c": 20.0,
+"f": 50.0,
+"aisle": "Pantry"
+},
+"almond butter": {
+"kcal": 614.0,
+"p": 21.0,
+"c": 19.0,
+"f": 56.0,
+"aisle": "Pantry"
+},
+"almonds": {
+"kcal": 579.0,
+"p": 21.0,
+"c": 22.0,
+"f": 50.0,
+"aisle": "Pantry"
+},
+"walnuts": {
+"kcal": 654.0,
+"p": 15.0,
+"c": 14.0,
+"f": 65.0,
+"aisle": "Pantry"
+},
+"cashews": {
+"kcal": 553.0,
+"p": 18.0,
+"c": 30.0,
+"f": 44.0,
+"aisle": "Pantry"
+},
+"chia seeds": {
+"kcal": 486.0,
+"p": 17.0,
+"c": 42.0,
+"f": 31.0,
+"aisle": "Pantry"
+},
+"sesame seeds": {
+"kcal": 573.0,
+"p": 18.0,
+"c": 23.0,
+"f": 50.0,
+"aisle": "Pantry"
+},
+"tahini": {
+"kcal": 595.0,
+"p": 17.0,
+"c": 21.0,
+"f": 54.0,
+"aisle": "Pantry"
+},
+"dark chocolate, 70%": {
+"kcal": 598.0,
+"p": 7.8,
+"c": 46.0,
+"f": 43.0,
+"aisle": "Pantry"
+},
+"cacao nibs": {
+"kcal": 580.0,
+"p": 12.0,
+"c": 35.0,
+"f": 45.0,
+"aisle": "Pantry"
+},
+"light coconut milk": {
+"kcal": 73.0,
+"p": 0.7,
+"c": 2.7,
+"f": 7.0,
+"aisle": "Pantry"
+},
+"hummus": {
+"kcal": 166.0,
+"p": 7.9,
+"c": 14.3,
+"f": 9.6,
+"aisle": "Fridge"
+},
+"light mayonnaise": {
+"kcal": 260.0,
+"p": 1.0,
+"c": 8.0,
+"f": 25.0,
+"aisle": "Pantry"
+},
+"pesto": {
+"kcal": 418.0,
+"p": 5.0,
+"c": 4.0,
+"f": 42.0,
+"aisle": "Pantry"
+},
+"light soy sauce": {
+"kcal": 53.0,
+"p": 8.0,
+"c": 4.9,
+"f": 0.6,
+"aisle": "Pantry"
+},
+"sweet chilli sauce": {
+"kcal": 220.0,
+"p": 0.5,
+"c": 54.0,
+"f": 0.5,
+"aisle": "Pantry"
+},
+"sriracha": {
+"kcal": 93.0,
+"p": 1.9,
+"c": 19.0,
+"f": 0.9,
+"aisle": "Pantry"
+},
+"curry paste": {
+"kcal": 150.0,
+"p": 3.0,
+"c": 15.0,
+"f": 8.0,
+"aisle": "Pantry"
+},
+"bbq sauce": {
+"kcal": 172.0,
+"p": 0.8,
+"c": 41.0,
+"f": 0.6,
+"aisle": "Pantry"
+},
+"salsa": {
+"kcal": 36.0,
+"p": 1.5,
+"c": 7.0,
+"f": 0.2,
+"aisle": "Pantry"
+},
+"olives": {
+"kcal": 145.0,
+"p": 1.0,
+"c": 3.8,
+"f": 15.0,
+"aisle": "Pantry"
+}
+}

@@ -1,0 +1,20 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><style>
+{{fonts}}
+* { box-sizing: border-box; }
+html, body { margin: 0; width: 1080px; height: 640px; background: #F1EEE8; }
+.card { position: absolute; left: 50px; top: 50px; right: 50px; bottom: 50px; background: #fff; border-radius: 34px; padding: 44px 50px;
+  box-shadow: 0 30px 70px rgba(40,30,20,0.14), 0 0 0 1px rgba(0,0,0,0.04); font-family: 'Inter', sans-serif; }
+.file { font-size: 24px; color: #1C1B1A; font-weight: 500; } .file span { color: #C8442B; }
+.lab { font-size: 20px; letter-spacing: 2.5px; font-weight: 700; margin-top: 30px; }
+.w { display: flex; align-items: center; gap: 3px; height: 120px; }
+.w i { display: block; width: 5px; border-radius: 3px; flex: none; }
+.ok { display: flex; flex-wrap: wrap; gap: 14px 34px; margin-top: 30px; font-size: 21px; color: #1C1B1A; }
+.ok div { display: flex; align-items: center; gap: 12px; }
+.ok b { width: 28px; height: 28px; border-radius: 14px; background: #2FAA68; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; }
+</style></head><body><div class="card">
+<div class="file"><span>›</span> {{name}}</div>
+<div class="lab" style="color:#8A847C">BEFORE</div><div class="w">{{before}}</div>
+<div class="lab" style="color:#C8442B;margin-top:18px">AFTER</div><div class="w">{{after}}</div>
+<div class="ok"><div><b>✓</b>{{drop}}</div><div><b>✓</b>Voice clear and levelled</div><div><b>✓</b>Loudness set for Instagram</div></div>
+</div></body></html>

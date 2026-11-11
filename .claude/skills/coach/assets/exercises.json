@@ -1,0 +1,674 @@
+{
+"bench press": {
+"primary": [
+"chest",
+"front-delts"
+],
+"secondary": [
+"triceps"
+]
+},
+"incline bench press": {
+"primary": [
+"chest",
+"front-delts"
+],
+"secondary": [
+"triceps"
+]
+},
+"decline bench press": {
+"primary": [
+"chest"
+],
+"secondary": [
+"triceps",
+"front-delts"
+]
+},
+"dumbbell bench press": {
+"primary": [
+"chest",
+"front-delts"
+],
+"secondary": [
+"triceps"
+]
+},
+"incline dumbbell press": {
+"primary": [
+"chest",
+"front-delts"
+],
+"secondary": [
+"triceps"
+]
+},
+"chest fly": {
+"primary": [
+"chest"
+],
+"secondary": [
+"front-delts"
+]
+},
+"cable fly": {
+"primary": [
+"chest"
+],
+"secondary": [
+"front-delts"
+]
+},
+"pec deck": {
+"primary": [
+"chest"
+],
+"secondary": [
+"front-delts"
+]
+},
+"push up": {
+"primary": [
+"chest",
+"front-delts"
+],
+"secondary": [
+"triceps",
+"abs"
+]
+},
+"dips": {
+"primary": [
+"chest",
+"triceps"
+],
+"secondary": [
+"front-delts"
+]
+},
+"shoulder press": {
+"primary": [
+"front-delts",
+"side-delts"
+],
+"secondary": [
+"triceps",
+"traps"
+]
+},
+"overhead press": {
+"primary": [
+"front-delts",
+"side-delts"
+],
+"secondary": [
+"triceps",
+"traps",
+"abs"
+]
+},
+"arnold press": {
+"primary": [
+"front-delts",
+"side-delts"
+],
+"secondary": [
+"triceps"
+]
+},
+"lateral raise": {
+"primary": [
+"side-delts"
+],
+"secondary": [
+"traps"
+]
+},
+"cable lateral raise": {
+"primary": [
+"side-delts"
+],
+"secondary": [
+"traps"
+]
+},
+"front raise": {
+"primary": [
+"front-delts"
+],
+"secondary": [
+"side-delts"
+]
+},
+"rear delt fly": {
+"primary": [
+"rear-delts"
+],
+"secondary": [
+"traps"
+]
+},
+"face pull": {
+"primary": [
+"rear-delts",
+"traps"
+],
+"secondary": [
+"side-delts"
+]
+},
+"upright row": {
+"primary": [
+"side-delts",
+"traps"
+],
+"secondary": [
+"biceps"
+]
+},
+"shrug": {
+"primary": [
+"traps"
+],
+"secondary": [
+"forearms"
+]
+},
+"bicep curl": {
+"primary": [
+"biceps"
+],
+"secondary": [
+"forearms"
+]
+},
+"dumbbell curl": {
+"primary": [
+"biceps"
+],
+"secondary": [
+"forearms"
+]
+},
+"hammer curl": {
+"primary": [
+"biceps",
+"forearms"
+],
+"secondary": []
+},
+"preacher curl": {
+"primary": [
+"biceps"
+],
+"secondary": [
+"forearms"
+]
+},
+"cable curl": {
+"primary": [
+"biceps"
+],
+"secondary": [
+"forearms"
+]
+},
+"concentration curl": {
+"primary": [
+"biceps"
+],
+"secondary": [
+"forearms"
+]
+},
+"tricep pushdown": {
+"primary": [
+"triceps"
+],
+"secondary": []
+},
+"overhead tricep extension": {
+"primary": [
+"triceps"
+],
+"secondary": []
+},
+"skull crusher": {
+"primary": [
+"triceps"
+],
+"secondary": []
+},
+"close grip bench press": {
+"primary": [
+"triceps",
+"chest"
+],
+"secondary": [
+"front-delts"
+]
+},
+"tricep kickback": {
+"primary": [
+"triceps"
+],
+"secondary": []
+},
+"wrist curl": {
+"primary": [
+"forearms"
+],
+"secondary": []
+},
+"farmers carry": {
+"primary": [
+"forearms",
+"traps"
+],
+"secondary": [
+"abs",
+"glutes"
+]
+},
+"pull up": {
+"primary": [
+"lats"
+],
+"secondary": [
+"biceps",
+"rear-delts",
+"forearms"
+]
+},
+"chin up": {
+"primary": [
+"lats",
+"biceps"
+],
+"secondary": [
+"forearms"
+]
+},
+"lat pulldown": {
+"primary": [
+"lats"
+],
+"secondary": [
+"biceps",
+"rear-delts"
+]
+},
+"seated cable row": {
+"primary": [
+"lats",
+"traps"
+],
+"secondary": [
+"biceps",
+"rear-delts"
+]
+},
+"barbell row": {
+"primary": [
+"lats",
+"traps"
+],
+"secondary": [
+"biceps",
+"rear-delts",
+"lower-back"
+]
+},
+"dumbbell row": {
+"primary": [
+"lats"
+],
+"secondary": [
+"biceps",
+"rear-delts",
+"traps"
+]
+},
+"t-bar row": {
+"primary": [
+"lats",
+"traps"
+],
+"secondary": [
+"biceps",
+"rear-delts"
+]
+},
+"straight arm pulldown": {
+"primary": [
+"lats"
+],
+"secondary": [
+"triceps"
+]
+},
+"deadlift": {
+"primary": [
+"hamstrings",
+"glutes",
+"lower-back"
+],
+"secondary": [
+"traps",
+"lats",
+"forearms",
+"quads"
+]
+},
+"romanian deadlift": {
+"primary": [
+"hamstrings",
+"glutes"
+],
+"secondary": [
+"lower-back",
+"forearms"
+]
+},
+"stiff leg deadlift": {
+"primary": [
+"hamstrings"
+],
+"secondary": [
+"glutes",
+"lower-back"
+]
+},
+"good morning": {
+"primary": [
+"hamstrings",
+"lower-back"
+],
+"secondary": [
+"glutes"
+]
+},
+"back extension": {
+"primary": [
+"lower-back"
+],
+"secondary": [
+"glutes",
+"hamstrings"
+]
+},
+"squat": {
+"primary": [
+"quads",
+"glutes"
+],
+"secondary": [
+"adductors",
+"hamstrings",
+"lower-back"
+]
+},
+"back squat": {
+"primary": [
+"quads",
+"glutes"
+],
+"secondary": [
+"adductors",
+"hamstrings",
+"lower-back"
+]
+},
+"front squat": {
+"primary": [
+"quads"
+],
+"secondary": [
+"glutes",
+"abs"
+]
+},
+"goblet squat": {
+"primary": [
+"quads",
+"glutes"
+],
+"secondary": [
+"adductors",
+"abs"
+]
+},
+"hack squat": {
+"primary": [
+"quads"
+],
+"secondary": [
+"glutes"
+]
+},
+"leg press": {
+"primary": [
+"quads",
+"glutes"
+],
+"secondary": [
+"adductors",
+"hamstrings"
+]
+},
+"bulgarian split squat": {
+"primary": [
+"quads",
+"glutes"
+],
+"secondary": [
+"adductors",
+"hamstrings"
+]
+},
+"lunge": {
+"primary": [
+"quads",
+"glutes"
+],
+"secondary": [
+"hamstrings",
+"adductors"
+]
+},
+"walking lunge": {
+"primary": [
+"quads",
+"glutes"
+],
+"secondary": [
+"hamstrings",
+"adductors"
+]
+},
+"step up": {
+"primary": [
+"quads",
+"glutes"
+],
+"secondary": [
+"hamstrings"
+]
+},
+"leg extension": {
+"primary": [
+"quads"
+],
+"secondary": []
+},
+"leg curl": {
+"primary": [
+"hamstrings"
+],
+"secondary": [
+"calves"
+]
+},
+"seated leg curl": {
+"primary": [
+"hamstrings"
+],
+"secondary": []
+},
+"hip thrust": {
+"primary": [
+"glutes"
+],
+"secondary": [
+"hamstrings"
+]
+},
+"glute bridge": {
+"primary": [
+"glutes"
+],
+"secondary": [
+"hamstrings"
+]
+},
+"cable kickback": {
+"primary": [
+"glutes"
+],
+"secondary": [
+"hamstrings"
+]
+},
+"hip abduction": {
+"primary": [
+"glutes"
+],
+"secondary": []
+},
+"hip adduction": {
+"primary": [
+"adductors"
+],
+"secondary": []
+},
+"sumo deadlift": {
+"primary": [
+"glutes",
+"adductors",
+"quads"
+],
+"secondary": [
+"hamstrings",
+"lower-back",
+"traps"
+]
+},
+"calf raise": {
+"primary": [
+"calves"
+],
+"secondary": []
+},
+"seated calf raise": {
+"primary": [
+"calves"
+],
+"secondary": []
+},
+"plank": {
+"primary": [
+"abs"
+],
+"secondary": [
+"obliques",
+"front-delts"
+]
+},
+"crunch": {
+"primary": [
+"abs"
+],
+"secondary": [
+"obliques"
+]
+},
+"hanging leg raise": {
+"primary": [
+"abs"
+],
+"secondary": [
+"obliques",
+"forearms"
+]
+},
+"cable crunch": {
+"primary": [
+"abs"
+],
+"secondary": [
+"obliques"
+]
+},
+"russian twist": {
+"primary": [
+"obliques"
+],
+"secondary": [
+"abs"
+]
+},
+"side plank": {
+"primary": [
+"obliques"
+],
+"secondary": [
+"abs",
+"side-delts"
+]
+},
+"ab wheel rollout": {
+"primary": [
+"abs"
+],
+"secondary": [
+"lats",
+"front-delts"
+]
+},
+"kettlebell swing": {
+"primary": [
+"glutes",
+"hamstrings"
+],
+"secondary": [
+"lower-back",
+"front-delts",
+"forearms"
+]
+},
+"clean and press": {
+"primary": [
+"glutes",
+"quads",
+"front-delts"
+],
+"secondary": [
+"traps",
+"triceps",
+"hamstrings"
+]
+},
+"burpee": {
+"primary": [
+"quads",
+"chest"
+],
+"secondary": [
+"front-delts",
+"triceps",
+"abs",
+"glutes"
+]
+}
+}
