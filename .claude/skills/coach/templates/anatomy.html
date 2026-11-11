@@ -3,29 +3,18 @@
 {{fonts}}
 * { box-sizing: border-box; }
 html, body { margin: 0; width: 1080px; height: 1350px; background: {{bg}}; overflow: hidden; }
-.wrap { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; font-family: 'Jakarta', sans-serif; color: #F5F5F7; }
-.bgglow { position: absolute; left: 50%; top: 52%; width: 900px; height: 900px; margin: -450px 0 0 -450px; border-radius: 50%;
-  background: radial-gradient(circle, color-mix(in srgb, {{colour}} 16%, transparent), transparent 62%); }
-.figs { position: relative; flex: 1; width: 100%; display: flex; align-items: center; justify-content: center; gap: 10px; }
-.fig { position: relative; aspect-ratio: 1536 / 2752; }
+.stage { position: absolute; inset: 0; overflow: hidden; }
+.fig { position: absolute; left: 50%; top: {{fig_top}}px; width: {{fig_w}}px; height: {{fig_h}}px; margin-left: calc({{fig_w}}px / -2); }
 .fig > * { position: absolute; inset: 0; width: 100%; height: 100%; }
 .lines { object-fit: contain; }
-.fill, .glow { background: {{colour}}; -webkit-mask: var(--m) center / contain no-repeat; mask: var(--m) center / contain no-repeat; }
-.glow { filter: blur(22px); transform: scale(1.02); }
-.label { position: relative; width: 100%; padding: 0 70px 64px; }
-.ex { font-size: 64px; font-weight: 800; letter-spacing: -0.04em; line-height: 1; }
-.row { display: flex; gap: 14px; margin-top: 20px; flex-wrap: wrap; }
-.chip { display: flex; align-items: center; gap: 10px; padding: 12px 20px; border-radius: 999px; background: rgba(255,255,255,0.07);
-  border: 1px solid rgba(255,255,255,0.12); font-size: 24px; font-weight: 600; }
-.dot { width: 14px; height: 14px; border-radius: 7px; background: {{colour}}; box-shadow: 0 0 12px {{colour}}; }
-.dot.s { opacity: 0.45; box-shadow: none; }
-.k { color: rgba(235,235,245,0.55); font-weight: 700; font-size: 16px; letter-spacing: 0.14em; text-transform: uppercase; margin-right: 4px; }
-</style></head><body><div class="wrap">
-<div class="bgglow" style="{{label_vis}}"></div>
-<div class="figs">{{figs}}</div>
-<div class="label" style="{{label_vis}}">
-  <div class="ex">{{exercise}}</div>
-  <div class="row"><div class="chip"><span class="dot"></span><span class="k">Primary</span>{{primary}}</div>
-  <div class="chip" style="{{sec_vis}}"><span class="dot s"></span><span class="k">Also</span>{{secondary}}</div></div>
-</div>
+.fill { background: linear-gradient(160deg, {{light}} 0%, {{base}} 70%); -webkit-mask: var(--m) center / contain no-repeat; mask: var(--m) center / contain no-repeat; }
+.glow { background: {{base}}; filter: blur(18px); -webkit-mask: var(--m) center / contain no-repeat; mask: var(--m) center / contain no-repeat; }
+.tag { position: absolute; right: 48px; top: 56px; width: 300px; font-family: 'Jakarta', sans-serif; box-shadow: 0 10px 30px rgba(0,0,0,0.25); }
+.tag .h { background: {{base}}; color: #fff; font-size: 24px; font-weight: 800; letter-spacing: 0.12em; text-align: center; padding: 12px 14px; }
+.tag .b { background: #fff; color: #121417; font-size: 18px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; text-align: center;
+  padding: 14px 16px; line-height: 1.4; }
+.tag .a { background: #fff; color: #6B7178; font-size: 14px; font-weight: 600; text-align: center; padding: 0 16px 14px; margin-top: -6px; }
+</style></head><body><div class="stage">
+<div class="fig">{{layers}}<img class="lines" src="{{lines}}"></div>
+<div class="tag"><div class="h">{{heading}}</div><div class="b">{{names}}</div><div class="a" style="{{also_vis}}">{{also}}</div></div>
 </div></body></html>

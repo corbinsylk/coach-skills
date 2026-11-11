@@ -29,7 +29,10 @@ plan = json.loads(Path(a.plan).read_text())
 prof = load_profile()
 FOODS = json.loads((ASSETS / "foods.json").read_text())
 LOWER = {k.lower(): k for k in FOODS}
-PHOTOS = sorted(p.stem for p in (ASSETS / "food").glob("*.jpg") if p.stem != "cover")
+from common import HOME
+PHOTO_FILES = {p.stem: p for p in (ASSETS / "food").glob("*.jpg") if p.stem != "cover"}
+PHOTO_FILES.update({p.stem: p for p in (HOME / "Library" / "food").glob("*.*") if p.suffix.lower() in (".jpg", ".png")})   # the coach's own, made with food_photo.py
+PHOTOS = sorted(PHOTO_FILES)
 
 d = client_dir(plan["client"])
 t = plan.get("targets")
@@ -141,7 +144,7 @@ def amount(ing):
 
 
 first = plan["client"].split()[0]
-photo_uri = lambda name: (ASSETS / "food" / f"{name}.jpg").as_uri()
+photo_uri = lambda name: (PHOTO_FILES.get(name) or ASSETS / "food" / f"{name}.jpg").as_uri()
 pages = []
 cover = f"""<section class="pg cover"><img class="ph" src="{photo_uri('cover')}"><div class="veil"></div>
 <div class="brand frost">{logo_html(prof)}</div>

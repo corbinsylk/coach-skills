@@ -58,6 +58,42 @@ def find_browser():
     return None
 
 
+# the coach's brand: one accent colour, one heading font (stock list or their own file), their logo. Layouts never change.
+FONTS = {   # name: (file, css weight range, kind)
+    "Plus Jakarta Sans": ("PlusJakartaSans.ttf", "200 800", "sans"), "Inter": ("Inter.ttf", "100 900", "sans"),
+    "Montserrat": ("Montserrat.ttf", "100 900", "sans"), "DM Sans": ("DMSans.ttf", "100 1000", "sans"),
+    "Poppins": ("Poppins-Bold.ttf", "700 800", "sans"),
+    "Playfair Display": ("PlayfairDisplay.ttf", "400 900", "serif"), "Fraunces": ("Fraunces.ttf", "100 900", "serif"),
+    "Lora": ("Lora.ttf", "400 700", "serif"), "DM Serif Display": ("DMSerifDisplay.ttf", "400 900", "serif"),
+}
+ACCENTS = {"green": "#16A34A", "lime": "#84CC16", "teal": "#0D9488", "blue": "#2563EB", "purple": "#7C3AED", "pink": "#DB2777",
+           "red": "#DC2626", "orange": "#EA580C", "gold": "#CA8A04", "black": "#121417"}
+
+
+def accent_hex(v):
+    v = (v or "").strip().lower()
+    if v in ACCENTS: return ACCENTS[v]
+    if re.fullmatch(r"#?[0-9a-f]{6}", v): return "#" + v.lstrip("#").upper()
+    return None
+
+
+def brand_css(p, default_font="Plus Jakarta Sans", default_accent="#16A34A"):
+    """CSS variables --accent and --head (the heading font) for the templates."""
+    acc = accent_hex(p.get("accent")) or default_accent
+    ff = p.get("font_file") or ""
+    if ff and Path(ff).exists():
+        fmt = {".otf": "opentype", ".woff2": "woff2", ".woff": "woff"}.get(Path(ff).suffix.lower(), "truetype")
+        face = f"@font-face{{font-family:'BrandHead';src:url('{Path(ff).resolve().as_uri()}') format('{fmt}');font-weight:100 900;}}"
+        kind = p.get("font_kind", "sans")
+    else:
+        name = p.get("font") if p.get("font") in FONTS else default_font
+        file, wr, kind = FONTS[name]
+        face = f"@font-face{{font-family:'BrandHead';src:url('{(ASSETS / 'fonts' / file).as_uri()}') format('truetype');font-weight:{wr};}}"
+    # serif headings are set a touch less heavy and less tight than the sans ones
+    hw, ls = ("700", "-0.02em") if kind == "serif" else ("800", "-0.04em")
+    return face + f":root{{--accent:{acc};--head:'BrandHead','Jakarta',sans-serif;--head-w:{hw};--head-ls:{ls};}}"
+
+
 def font_css():
     """The two fonts ship in assets/fonts (SIL Open Font Licence)."""
     f = (ASSETS / "fonts").as_uri()
@@ -68,7 +104,8 @@ def font_css():
 def fill(template, values):
     """{{key}} placeholders in a template file."""
     html = (TEMPLATES / template).read_text()
-    values = {"fonts": font_css(), "assets": ASSETS.as_uri(), **values}
+    dfont = "Inter" if template == "macro-card.html" else "Plus Jakarta Sans"   # each locked design keeps its own type unless the coach picks one
+    values = {"fonts": font_css() + brand_css(load_profile(), default_font=dfont), "assets": ASSETS.as_uri(), **values}
     return re.sub(r"\{\{(\w+)\}\}", lambda m: str(values.get(m.group(1), "")), html)
 
 

@@ -10,6 +10,7 @@ html, body { margin: 0; width: 794px; height: 1123px; background: #050506; }
 .glass { position: relative; background: linear-gradient(160deg, rgba(255,255,255,0.10) 0%, rgba(255,255,255,0.035) 45%, rgba(255,255,255,0.06) 100%);
   border: 1px solid rgba(255,255,255,0.14); border-radius: 26px;
   box-shadow: inset 0 1px 0 rgba(255,255,255,0.22), inset 0 -1px 0 rgba(255,255,255,0.04), 0 20px 50px rgba(0,0,0,0.45); }
+.acc { color: color-mix(in srgb, var(--accent) 72%, white) !important; }
 .lab { font-size: 11px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(235,235,245,0.55); }
 header { position: relative; display: flex; justify-content: space-between; align-items: center; height: 60px; }
 .logo { height: 56px; min-width: 120px; max-width: 300px; padding: 0 20px; border-radius: 16px; display: flex; align-items: center; justify-content: center; }
@@ -17,30 +18,30 @@ header { position: relative; display: flex; justify-content: space-between; alig
 .logo-word { font-size: 15px; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase; }
 .who { text-align: right; display: flex; flex-direction: column; gap: 4px; }
 .who b { font-size: 15px; font-weight: 600; } .who i { font-style: normal; font-size: 12px; color: rgba(235,235,245,0.55); }
-h1 { margin: 0; font-size: 54px; font-weight: 800; letter-spacing: -0.04em; line-height: 1; }
+h1 { margin: 0; font-size: 54px; line-height: 1; font-family: var(--head); font-weight: var(--head-w); letter-spacing: var(--head-ls); }
 .hero { padding: 28px 30px; display: grid; grid-template-columns: 280px minmax(0,1fr); gap: 30px; align-items: center; border-radius: 30px; }
 .ringbox { position: relative; width: 280px; height: 280px; }
 .ringmid { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; }
-.ringmid span:first-child { font-size: 34px; font-weight: 800; letter-spacing: -0.04em; }
+.ringmid span:first-child { font-family: var(--head); font-weight: var(--head-w); letter-spacing: var(--head-ls); font-size: 34px;  }
 .rows { display: flex; flex-direction: column; gap: 22px; }
 .mrow { display: flex; align-items: center; justify-content: space-between; }
-.mg { font-size: 40px; font-weight: 800; letter-spacing: -0.04em; line-height: 1.05; margin-top: 4px; }
+.mg { font-family: var(--head); font-weight: var(--head-w); letter-spacing: var(--head-ls); font-size: 40px;  line-height: 1.05; margin-top: 4px; }
 .mg span { font-size: 18px; font-weight: 600; color: rgba(235,235,245,0.55); margin-left: 3px; }
 .mside { text-align: right; font-size: 13px; color: rgba(235,235,245,0.55); line-height: 1.5; }
 .tiles { position: relative; display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 14px; }
 .tile { padding: 18px 20px; height: 118px; display: flex; flex-direction: column; justify-content: space-between; border-radius: 22px; }
 .trow { display: flex; justify-content: space-between; align-items: center; }
 .tag { font-size: 10.5px; font-weight: 700; padding: 4px 9px; border-radius: 999px; background: rgba(255,255,255,0.12); }
-.tv { display: flex; align-items: baseline; gap: 5px; } .tv span { font-size: 40px; font-weight: 800; letter-spacing: -0.04em; line-height: 1; }
+.tv { display: flex; align-items: baseline; gap: 5px; } .tv span { font-family: var(--head); font-weight: var(--head-w); letter-spacing: var(--head-ls); font-size: 40px;  line-height: 1; }
 .tv small { font-size: 13px; font-weight: 600; color: rgba(235,235,245,0.55); }
 .permeal { padding: 22px 24px; display: flex; flex-direction: column; gap: 16px; }
 .phead { display: flex; justify-content: space-between; align-items: center; }
-.phead .t { font-size: 22px; font-weight: 800; letter-spacing: -0.02em; } .phead .s { font-size: 13px; color: rgba(235,235,245,0.55); margin-top: 3px; }
+.phead .t { font-family: var(--head); font-weight: var(--head-w); letter-spacing: var(--head-ls); font-size: 22px;  } .phead .s { font-size: 13px; color: rgba(235,235,245,0.55); margin-top: 3px; }
 .chip { padding: 8px 14px; border-radius: 999px; background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.14); color: #F5F5F7; }
 .pgrid { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 10px; }
 .pm { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08); border-radius: 16px; padding: 14px 16px; display: flex; flex-direction: column; gap: 8px; }
 .pm .bar { width: 22px; height: 4px; border-radius: 999px; }
-.pv { font-size: 28px; font-weight: 800; letter-spacing: -0.04em; line-height: 1; } .pv small { font-size: 12px; font-weight: 600; color: rgba(235,235,245,0.55); margin-left: 3px; }
+.pv { font-family: var(--head); font-weight: var(--head-w); letter-spacing: var(--head-ls); font-size: 28px;  line-height: 1; } .pv small { font-size: 12px; font-weight: 600; color: rgba(235,235,245,0.55); margin-left: 3px; }
 .notes { flex: 1; min-height: 0; padding: 16px 24px; display: flex; flex-direction: column; gap: 12px; border-radius: 22px; }
 .notes p { margin: 0; font-size: 14px; line-height: 1.5; color: rgba(245,245,247,0.85); }
 .line { border-bottom: 1px solid rgba(255,255,255,0.10); height: 16px; }
@@ -56,7 +57,7 @@ footer .h { display: flex; align-items: center; gap: 8px; font-size: 14px; font-
     <div class="who"><div class="lab">Client Nutrition Plan</div><b>Prepared for {{name}}</b><i>{{date}} · {{phase}}</i></div>
   </header>
   <div style="position:relative;display:flex;flex-direction:column;gap:8px;padding-top:2px">
-    <div class="lab" style="color:#A6FF4D">Your daily targets</div>
+    <div class="lab acc">Your daily targets</div>
     <h1>Your Macro Blueprint</h1>
   </div>
   <section class="glass hero">
@@ -69,10 +70,10 @@ footer .h { display: flex; align-items: center; gap: 8px; font-size: 14px; font-
   <div class="tiles">{{tiles}}</div>
   <section class="glass permeal">
     <div class="phead"><div><div class="t">Average per meal</div><div class="s">Your daily targets split evenly across your meals</div></div>
-      <span class="lab chip">{{meals}} meals / day</span></div>
+      <span class="lab chip" style="border-color: color-mix(in srgb, var(--accent) 55%, transparent)">{{meals}} meals / day</span></div>
     <div class="pgrid">{{per}}</div>
   </section>
-  <section class="glass notes"><span class="lab">Coach notes</span><p>{{notes}}</p><div class="line"></div><div class="line"></div></section>
+  <section class="glass notes"><span class="lab acc">Coach notes</span><p>{{notes}}</p><div class="line"></div><div class="line"></div></section>
   <footer><span class="b">{{business}}</span>
     <div class="h" style="{{handle_vis}}"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="0.6" fill="currentColor"/></svg><span>{{handle}}</span></div>
   </footer>

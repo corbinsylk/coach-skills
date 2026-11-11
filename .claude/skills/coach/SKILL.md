@@ -36,20 +36,33 @@ If they typed only `/coach`, show this and ask which one they want:
 - Ask for missing details **one short question at a time**, never a form. Use what they already said; never ask twice.
 - When a result is ready, the folder opens on its own. Tell them the file names and one line on what to do with them.
 - Every tool is in `tools/` next to this file. Run them with `python3` from that folder (on Windows `python` if `python3` is
-  missing). They need no API keys and send nothing anywhere.
+  missing). Everything runs on their computer. The only thing that leaves it: when a new muscle or food photo is needed, the
+  drawing or dish description goes to their own Gemini account.
+
+## First time only: Gemini
+
+`anatomy` and `meals` need the coach's Gemini connection (it draws new muscles and food photos). Before either, run
+`python3 tools/connect.py --status`. If it says NOT CONNECTED, do the connect step exactly as in the install (CLAUDE.md at the
+repo root, step 4): the browser page takes the key, never the chat.
 
 ## First time only: their brand
 
-Macro cards, recipe books and grocery lists carry the coach's own brand. Before the first `macros` or `meals` job, run
+The macro card, recipe book and grocery list are LOCKED designs: the layout never changes. Only four things are the coach's:
+their logo, one accent colour, one heading font, and their name and handle. Before the first `macros` or `meals` job, run
 `python3 tools/profile.py show`. If `set_up` is false, ask these, one at a time:
 
-1. "What's your coaching business called?" (goes on every card)
+1. "What's your coaching business called?"
 2. "Your Instagram handle?" (optional)
-3. "Got a logo? Drag the file in, or say skip." (optional)
-4. "Kilos and centimetres, or pounds and feet?"
+3. "Drag in your logo, ideally a transparent PNG. Or say skip." (without one, the business name is used)
+4. "Pick an accent colour: green, lime, teal, blue, purple, pink, red, orange, gold or black. Or give me your brand's hex code."
+5. "Pick a font for the headings." Offer the list from `python3 tools/profile.py fonts`. Sans: Plus Jakarta Sans, Inter, Montserrat,
+   DM Sans, Poppins. Serif: Playfair Display, Fraunces, Lora, DM Serif Display. Or "drag in your own font file". Ask whether
+   their own font is a serif or a sans.
+6. "Kilos and centimetres, or pounds and feet?"
 
-Then save it: `python3 tools/profile.py set --business "..." --handle "..." --logo "/path" --units metric|imperial`.
-Never ask again unless they want to change it ("change my logo" → run `set` with just that).
+Then save it: `python3 tools/profile.py set --business "..." --handle "..." --logo "/path" --accent blue --font "Montserrat"
+--units metric` (own font: `--font-file "/path/font.otf" --font-kind serif`). Never ask again unless they want to change
+something ("change my accent to orange" → run `set` with just that).
 
 ## Where results go
 
