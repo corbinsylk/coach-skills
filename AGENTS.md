@@ -19,7 +19,7 @@ This repo holds one Claude Code skill, `/coach`, in `.claude/skills/coach/`. Its
    "Last step: connect Gemini. A page is opening in your browser. Follow its three steps and click Save." Then run
    `python3 tools/connect.py` in the background and wait for CONNECTED. Never ask them to paste the key into this chat; if they
    do, don't repeat it, and point them to the page instead.
-5. Tell them: "Done. Type /coach to see the five tools. If it doesn't show, start a new chat."
+5. Tell them: "Done. Type /coach to see the six tools. If it doesn't show, start a new chat."
 
 An update is the same steps; the copy replaces the old one.
 

@@ -6,7 +6,7 @@ usage: audio.py "/path/to/clip.mp4" [--client "Name"] [--strength light|normal|s
 Writes "<clip> - clean.mp4" (or .m4a for audio files) and "<clip> - before and after.png" next to the other results."""
 import argparse, array, json, os, platform, shutil, subprocess, sys, venv
 from pathlib import Path
-from common import SKILL, ASSETS, HOME, client_dir, fill, render, open_folder
+from common import SKILL, ASSETS, HOME, client_dir, fill, render, open_folder, ffmpeg_bin
 
 ap = argparse.ArgumentParser()
 ap.add_argument("clip"); ap.add_argument("--client", default="")
@@ -15,23 +15,6 @@ a = ap.parse_args()
 src = Path(a.clip).expanduser()
 if not src.exists():
     sys.exit(f"NO FILE: {src}")
-
-
-def ffmpeg_bin():
-    """ffmpeg already on the computer, else a private copy installed once into this skill's folder (no admin rights)."""
-    p = shutil.which("ffmpeg")
-    if p: return p
-    vdir = SKILL / ".venv"
-    py = vdir / ("Scripts/python.exe" if platform.system() == "Windows" else "bin/python")
-    if not py.exists():
-        print("FIRST RUN: installing a private copy of ffmpeg into the skill folder (about a minute)...", flush=True)
-        venv.create(vdir, with_pip=True)
-    r = subprocess.run([str(py), "-c", "import imageio_ffmpeg;print(imageio_ffmpeg.get_ffmpeg_exe())"], capture_output=True, text=True)
-    if r.returncode != 0:
-        subprocess.run([str(py), "-m", "pip", "install", "-q", "imageio-ffmpeg"], check=True)
-        r = subprocess.run([str(py), "-c", "import imageio_ffmpeg;print(imageio_ffmpeg.get_ffmpeg_exe())"], capture_output=True, text=True, check=True)
-    return r.stdout.strip()
-
 
 FF = ffmpeg_bin()
 probe = subprocess.run([FF, "-hide_banner", "-i", str(src)], capture_output=True, text=True).stderr

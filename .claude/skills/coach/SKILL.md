@@ -1,12 +1,12 @@
 ---
 name: coach
-description: Five tools for fitness coaches. Use when the user types /coach, or asks to clean up gym audio or a noisy voice on a video, show which muscles an exercise works (an anatomy or muscle diagram), work out a client's macros or calories, build a meal plan, recipe book or grocery list that hits a client's macros, or edit a video. Commands are /coach audio, /coach anatomy, /coach macros, /coach meals and /coach edit.
-argument-hint: "audio | anatomy | macros | meals | edit  [details]"
+description: Six tools for fitness coaches. Use when the user types /coach, or asks to clean up gym audio or a noisy voice on a video, show which muscles an exercise works (an anatomy or muscle diagram), work out a client's macros or calories, build a meal plan, recipe book or grocery list that hits a client's macros, turn a client's before and after progress photos into a transformation reveal, or edit a video. Commands are /coach audio, /coach anatomy, /coach macros, /coach meals, /coach transform and /coach edit.
+argument-hint: "audio | anatomy | macros | meals | transform | edit  [details]"
 ---
 
 # /coach
 
-Five tools for fitness coaches. The user typed `/coach` followed by a command and maybe some details, or asked in plain words
+Six tools for fitness coaches. The user typed `/coach` followed by a command and maybe some details, or asked in plain words
 for one of these jobs. Work out which command it is, then open that command's file in the `commands/` folder next to this
 file and follow it exactly.
 
@@ -16,15 +16,17 @@ file and follow it exactly.
 | `anatomy` | A body with the muscles an exercise works glowing | `commands/anatomy.md` |
 | `macros` | A client's calories and macros, as a branded card | `commands/macros.md` |
 | `meals` | A recipe book and grocery list that hit those macros | `commands/meals.md` |
+| `transform` | A client's before and after photos as a body-scan reveal (Mac only) | `commands/transform.md` |
 | `edit` | The full video edit (Creator OS) | `commands/edit.md` |
 
 If they typed only `/coach`, show this and ask which one they want:
 
-> **/coach** gives you five tools:
+> **/coach** gives you six tools:
 > - `/coach audio` + your clip: cleans up gym audio
 > - `/coach anatomy` + an exercise: shows the muscles it works
 > - `/coach macros` + your client's stats: their macro card
 > - `/coach meals`: a recipe book and grocery list that hit those macros
+> - `/coach transform` + a client's before and after photos: the transformation reveal
 > - `/coach edit`: the full video edit
 >
 > Which one?
@@ -66,7 +68,7 @@ something ("change my accent to orange" → run `set` with just that).
 
 ## Where results go
 
-Everything lands in `Documents/Coach Skills/`, one folder per client (or `Clean audio` and `Anatomy` when no client is named).
+Everything lands in `Documents/Coach Skills/`, one folder per client (or `Clean audio`, `Anatomy` and `Transformations` when no client is named).
 Nothing they gave you is ever changed or moved.
 
 ## If something breaks

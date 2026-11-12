@@ -1,6 +1,6 @@
 # /coach: Claude skills for fitness coaches
 
-Five tools inside Claude Code. Type `/coach`, pick one, and get a finished file you can send to a client or post.
+Six tools inside Claude Code. Type `/coach`, pick one, and get a finished file you can send to a client or post.
 
 ![What it makes](preview.jpg)
 
@@ -10,6 +10,7 @@ Five tools inside Claude Code. Type `/coach`, pick one, and get a finished file 
 | `/coach anatomy` | An exercise ("shoulder press") | A drawn body with the muscles it works glowing, on a transparent background for your edits. Male or female, white or black lines, eight glow colours |
 | `/coach macros` | Your client's height, weight, age and goal | A branded macro card (image and PDF) with their calories, protein, carbs and fat |
 | `/coach meals` | What they like and don't eat | A recipe book and a weekly grocery list that hit those macros |
+| `/coach transform` | Your client's before and after photos | A premium before/after reveal: both bodies cut out on a dark studio, a scan line swaps the before for the after, callouts on what changed. Video, still and reel cover. The body itself is never edited: only the lighting, skin colour, clarity and size are matched. Mac only |
 | `/coach edit` | Your raw footage | The full edit. See below |
 
 ## Install it (2 minutes)
@@ -40,6 +41,7 @@ Just talk to it:
 - `/coach meals` → it asks what she likes, what she won't eat, and how simple the recipes should be
 - `/coach anatomy bulgarian split squat, female body`
 - `/coach audio` and drag in your clip
+- `/coach transform` → drag in the before photo, then the after, and say the client's name
 
 Plain English works too: "work out macros for my new client" or "clean up the audio on this" both trigger it.
 
@@ -50,7 +52,7 @@ Everything lands in **Documents → Coach Skills**, one folder per client, and t
 - Claude Code (above)
 - Google Chrome, which draws the cards and books (most computers already have it)
 - A Google AI Studio key for Gemini (free to create; images cost about 4 cents each on Google's side)
-- A Mac, Windows or Linux computer
+- A Mac, Windows or Linux computer (`/coach transform` needs a Mac with macOS 14 or newer)
 
 Your clips and your clients' details stay on your computer. Only a muscle drawing or a dish description goes to your own
 Gemini account when a new image is needed.
@@ -67,6 +69,9 @@ It isn't in this free pack. To get access, **message [@corbinsylk](https://ig.me
   starting point and adjust from their check-ins.
 - The meal planner works out every recipe's macros from a nutrition table, then scales the portions until each meal hits its
   share of the day. Pick one recipe per meal and the day adds up.
+- The transformation reveal cuts the body out with Apple's built-in subject lift and matches the two photos with one uniform
+  scale (torso to torso), the exposure and the skin colour. Nothing reshapes the body, so what the video shows is what happened.
+  Front-on photos at a similar distance work best.
 - The audio clean-up is a free noise-removal model. It handles gym noise, fans and crowd well. Music as loud as your voice
   will still come through.
 

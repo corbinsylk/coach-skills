@@ -1,6 +1,6 @@
 """Shared helpers for the /coach tools: the coach's profile, the output folder, and HTML -> PNG / PDF through the
 browser already on the computer (Chrome, Edge, Brave or Chromium). Standard library only."""
-import json, os, re, shutil, subprocess, sys, tempfile, platform
+import json, os, re, shutil, subprocess, sys, tempfile, platform, venv
 from pathlib import Path
 
 SKILL = Path(__file__).resolve().parent.parent          # .../skills/coach
@@ -168,3 +168,19 @@ def logo_html(p, dark=False):
         return f'<img class="logo-img" src="{Path(logo).resolve().as_uri()}">'
     name = esc(p.get("business") or "Your Coaching")
     return f'<span class="logo-word">{name}</span>'
+
+
+def ffmpeg_bin():
+    """ffmpeg already on the computer, else a private copy installed once into this skill's folder (no admin rights)."""
+    p = shutil.which("ffmpeg")
+    if p: return p
+    vdir = SKILL / ".venv"
+    py = vdir / ("Scripts/python.exe" if platform.system() == "Windows" else "bin/python")
+    if not py.exists():
+        print("FIRST RUN: installing a private copy of ffmpeg into the skill folder (about a minute)...", flush=True)
+        venv.create(vdir, with_pip=True)
+    r = subprocess.run([str(py), "-c", "import imageio_ffmpeg;print(imageio_ffmpeg.get_ffmpeg_exe())"], capture_output=True, text=True)
+    if r.returncode != 0:
+        subprocess.run([str(py), "-m", "pip", "install", "-q", "imageio-ffmpeg"], check=True)
+        r = subprocess.run([str(py), "-c", "import imageio_ffmpeg;print(imageio_ffmpeg.get_ffmpeg_exe())"], capture_output=True, text=True, check=True)
+    return r.stdout.strip()

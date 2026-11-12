@@ -1,0 +1,125 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><style>
+{{fonts}}
+/* /coach transform: the locked design. Both photos cut out on one dark studio under a soft rim light in the coach's accent; a scan line
+   sweeps head to thighs, the after replacing the before as it passes; the after glows once as the scan lands; four frosted callouts draw in.
+   The camera pushes slowly about the chest the whole time. Open the file to watch it loop; ?t=2.5 shows one moment. */
+* { box-sizing: border-box; }
+html, body { margin: 0; width: 1080px; height: 1920px; overflow: hidden; background: #070606; }
+#stage { position: absolute; inset: 0; overflow: hidden; background: radial-gradient(ellipse 80% 60% at 50% 42%, #221C18 0%, #110E0C 55%, #070606 100%); }
+#rim { position: absolute; left: 140px; top: 420px; width: 800px; height: 1100px; border-radius: 50%; filter: blur(30px);
+  background: radial-gradient(closest-side, rgba({{rgb}},0.22), rgba({{rgb}},0) 100%); }
+#cam { position: absolute; inset: 0; }
+.body { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px;
+  -webkit-mask-image: linear-gradient(180deg, #000 0, #000 1640px, transparent 1880px); mask-image: linear-gradient(180deg, #000 0, #000 1640px, transparent 1880px); }
+#scan { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; -webkit-mask-image: url('{{after}}'); mask-image: url('{{after}}');
+  -webkit-mask-size: 1080px 1920px; mask-size: 1080px 1920px;
+  background: repeating-linear-gradient(180deg, rgba({{rgb}},0) 0px, rgba({{rgb}},0) 5px, rgba(255,236,226,0.55) 5px, rgba(255,236,226,0.55) 7px),
+              linear-gradient(180deg, rgba({{rgb}},0) 0%, rgba({{rgb}},0.35) 100%); }
+#line { position: absolute; left: 60px; width: 960px; height: 4px; background: linear-gradient(90deg, transparent 0%, #FFFFFF 22%, #FFFFFF 78%, transparent 100%);
+  box-shadow: 0 0 18px 4px {{accent}}, 0 0 60px 10px rgba({{rgb}},0.45); }
+svg.call { position: absolute; inset: 0; overflow: visible; }
+.pill { position: absolute; height: 88px; display: flex; flex-direction: column; justify-content: center; gap: 4px; padding: 0 24px; border-radius: 24px;
+  background: rgba(14,12,11,0.55); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border: 1px solid rgba(255,255,255,0.14);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.35); font-family: 'Jakarta', sans-serif; white-space: nowrap; }
+.pill .t { font-family: var(--head); font-size: 34px; font-weight: 800; letter-spacing: -0.6px; color: #FFFFFF; line-height: 1; }
+.pill .s { font-size: 19px; font-weight: 700; letter-spacing: 2.2px; line-height: 1; text-transform: uppercase; color: {{accent}}; }
+#head { position: absolute; left: 0; right: 0; top: 196px; display: flex; flex-direction: column; align-items: center; }
+#words { height: 64px; overflow: hidden; position: relative; width: 600px; }
+#words div { position: absolute; left: 0; right: 0; height: 64px; text-align: center; font-family: var(--head); font-weight: 800; font-size: 54px;
+  letter-spacing: 10px; line-height: 64px; padding-left: 10px; }
+#rail { margin-top: 18px; width: 420px; height: 4px; border-radius: 2px; background: rgba(255,255,255,0.16); position: relative; }
+#fillr { position: absolute; left: 0; top: 0; height: 4px; border-radius: 2px; background: {{accent}}; box-shadow: 0 0 12px {{accent}}; }
+#knob { position: absolute; top: -5px; width: 14px; height: 14px; border-radius: 7px; background: #FFFFFF; box-shadow: 0 0 10px {{accent}}; }
+#label { order: -1; height: 28px; margin-bottom: 10px; font-family: 'Jakarta', sans-serif; font-weight: 700; font-size: 22px; letter-spacing: 6px; color: rgba(255,255,255,0.7); text-transform: uppercase; }
+#brand { position: absolute; left: 0; right: 0; top: 1720px; text-align: center; font-family: 'Jakarta', sans-serif; font-weight: 700; font-size: 26px;
+  letter-spacing: 1px; color: rgba(255,255,255,0.75); }
+#brand img { height: 64px; max-width: 360px; object-fit: contain; }
+</style></head><body><div id="stage">
+<div id="rim"></div>
+<div id="cam">
+  <img id="before" class="body" src="{{before}}">
+  <img id="after" class="body" src="{{after}}">
+  <div id="scan"></div>
+  <div id="calls"></div>
+</div>
+<div id="line"></div>
+<div id="head"><div id="words"><div id="w0" style="color:rgba(255,255,255,0.75)">BEFORE</div><div id="w1" style="color:#FFFFFF">AFTER</div></div>
+  <div id="rail"><div id="fillr"></div><div id="knob"></div></div><div id="label">{{label}}</div></div>
+<div id="brand">{{brand}}</div>
+</div>
+<script>
+const A = {{anchors}}, CALLS = {{calls}}, DUR = {{duration}}, ACC = '{{accent}}', RGB = '{{rgb}}';
+const SCAN = { from: 0.35, to: 1.45, top: 150, bottom: 1920 };
+function bezier(x1, y1, x2, y2) {           // cubic-bezier easing, as in CSS
+  const cx = 3 * x1, bx = 3 * (x2 - x1) - cx, ax = 1 - cx - bx, cy = 3 * y1, by = 3 * (y2 - y1) - cy, ay = 1 - cy - by;
+  const X = t => ((ax * t + bx) * t + cx) * t, Y = t => ((ay * t + by) * t + cy) * t, dX = t => (3 * ax * t + 2 * bx) * t + cx;
+  return x => { let t = x; for (let i = 0; i < 8; i++) { const e = X(t) - x, d = dX(t); if (Math.abs(e) < 1e-6 || Math.abs(d) < 1e-6) break; t -= e / d; }
+    t = Math.min(1, Math.max(0, t)); return Y(t); };
+}
+const LIN = x => x, OUTQ = bezier(0.16, 1, 0.3, 1), INOUT = bezier(0.65, 0, 0.35, 1), SINE = bezier(0.45, 0, 0.55, 1);
+function k(t, t0, t1, a, b, e = LIN) { const p = Math.min(1, Math.max(0, (t - t0) / (t1 - t0))); return a + (b - a) * e(p); }
+const $ = id => document.getElementById(id);
+const NS = 'http://www.w3.org/2000/svg';
+// the callouts: a dot on the body, a line with one elbow, a frosted pill with the title over its word
+const els = CALLS.map(c => {
+  const svg = document.createElementNS(NS, 'svg'); svg.setAttribute('class', 'call'); svg.setAttribute('width', 1080); svg.setAttribute('height', 1920);
+  const [ax, ay] = c.anchor, [lx, ly] = c.label, ex = c.side === 'l' ? lx + 18 : lx - 18, elbowX = ax + (ex - ax) * 0.45;
+  const len = Math.hypot(elbowX - ax, ly - ay) + Math.abs(ex - elbowX);
+  const path = document.createElementNS(NS, 'path');
+  path.setAttribute('d', `M${ax},${ay} L${elbowX},${ly} L${ex},${ly}`); path.setAttribute('fill', 'none'); path.setAttribute('stroke', 'rgba(255,255,255,0.85)');
+  path.setAttribute('stroke-width', 2.5); path.setAttribute('stroke-linecap', 'round'); path.setAttribute('stroke-linejoin', 'round'); path.setAttribute('stroke-dasharray', len);
+  const ring = document.createElementNS(NS, 'circle'); ring.setAttribute('cx', ax); ring.setAttribute('cy', ay); ring.setAttribute('fill', 'none'); ring.setAttribute('stroke', ACC); ring.setAttribute('stroke-width', 2.5);
+  const dot = document.createElementNS(NS, 'circle'); dot.setAttribute('cx', ax); dot.setAttribute('cy', ay); dot.setAttribute('fill', '#FFFFFF');
+  svg.append(path, ring, dot);
+  const pill = document.createElement('div'); pill.className = 'pill';
+  pill.style.top = (ly - 44) + 'px'; pill.style.alignItems = c.side === 'l' ? 'flex-end' : 'flex-start';
+  if (c.side === 'l') pill.style.right = (1080 - lx) + 'px'; else pill.style.left = lx + 'px';
+  const t = document.createElement('span'); t.className = 't'; t.textContent = c.title;
+  const s = document.createElement('span'); s.className = 's'; s.textContent = c.sub;
+  pill.append(t, s); $('calls').append(svg, pill);
+  return { c, svg, path, ring, dot, pill, t, s, len };
+});
+function draw(t) {
+  const s = k(t, SCAN.from, SCAN.to, 0, 1, INOUT), y = SCAN.top + (SCAN.bottom - SCAN.top) * s;
+  const scanO = k(t, SCAN.from - 0.12, SCAN.from + 0.05, 0, 1) * (1 - k(t, SCAN.to, SCAN.to + 0.2, 0, 1));
+  const glow = k(t, SCAN.to - 0.1, SCAN.to + 0.15, 0, 1) * (1 - k(t, SCAN.to + 0.15, SCAN.to + 0.9, 0, 1, OUTQ));
+  const push = 1 + 0.06 * k(t, 0, 4, 0, 1, SINE);          // never dead: the slow push about the chest
+  const after = s > 0 || t > SCAN.to;
+  $('cam').style.transformOrigin = `${A.chest[0]}px ${A.chest[1]}px`; $('cam').style.transform = `scale(${push})`;
+  // below the scan line the before, above it the after
+  $('before').style.clipPath = `inset(${after ? y : 0}px 0 0 0)`;
+  $('before').style.filter = `drop-shadow(0 0 22px rgba(${RGB},0.18))`;
+  $('after').style.display = after ? 'block' : 'none';
+  $('after').style.clipPath = `inset(0 0 ${1920 - y}px 0)`;
+  $('after').style.filter = `drop-shadow(0 0 ${22 + 26 * glow}px rgba(${RGB},${0.18 + 0.4 * glow}))`;
+  // scan lines ride the body (the after's own shape as the mask), 150 px above the line
+  $('scan').style.opacity = scanO; $('scan').style.clipPath = `inset(${Math.max(0, y - 150)}px 0 ${1920 - y}px 0)`;
+  $('line').style.opacity = scanO; $('line').style.top = ((y - A.chest[1]) * push + A.chest[1] - 2) + 'px';
+  // the header: BEFORE rolls up into AFTER as the scan passes the middle, the rail fills with the scan
+  const flip = k(t, SCAN.from + 0.45, SCAN.from + 0.75, 0, 1, INOUT), head = k(t, 0, 0.25, 0, 1, OUTQ);
+  $('head').style.opacity = head; $('head').style.transform = `translateY(${(1 - head) * 16}px)`;
+  $('w0').style.top = (-flip * 64) + 'px'; $('w1').style.top = ((1 - flip) * 64) + 'px';
+  $('fillr').style.width = (420 * s) + 'px'; $('knob').style.left = (420 * s - 7) + 'px';
+  $('brand').style.opacity = k(t, 2.4, 2.9, 0, 1, OUTQ);
+  for (const e of els) {
+    const lt = t - e.c.at, on = lt >= 0;
+    e.svg.style.display = on ? 'block' : 'none'; e.pill.style.display = on ? 'flex' : 'none';
+    if (!on) continue;
+    const dot = k(lt, 0, 0.18, 0, 1, OUTQ), drawn = k(lt, 0.06, 0.4, 0, 1, INOUT), txt = k(lt, 0.25, 0.55, 0, 1, OUTQ), sub = k(lt, 0.33, 0.63, 0, 1, OUTQ);
+    e.path.setAttribute('stroke-dashoffset', e.len * (1 - drawn));
+    e.ring.setAttribute('r', 18 * dot); e.ring.setAttribute('opacity', 0.9 * dot); e.dot.setAttribute('r', 7 * dot);
+    e.pill.style.opacity = txt; e.pill.style.transform = `translateX(${(1 - txt) * (e.c.side === 'l' ? 14 : -14)}px)`;
+    e.s.style.opacity = sub / Math.max(txt, 0.001); e.s.style.transform = `translateY(${(1 - sub) * 8}px)`;
+  }
+  return new Promise(r => requestAnimationFrame(() => requestAnimationFrame(r)));
+}
+window.draw = draw;
+window.ready = Promise.all([...document.images].map(i => i.decode().catch(() => {}))).then(() => document.fonts.ready);
+const q = new URLSearchParams(location.search);
+if (q.has('t')) draw(parseFloat(q.get('t')));
+else if (!q.has('capture')) {           // opened by hand: play it on a loop
+  let t0 = null; const loop = now => { if (t0 === null) t0 = now; draw(((now - t0) / 1000) % (DUR + 0.6)); requestAnimationFrame(loop); };
+  window.ready.then(() => requestAnimationFrame(loop));
+} else draw(0);
+</script></body></html>
